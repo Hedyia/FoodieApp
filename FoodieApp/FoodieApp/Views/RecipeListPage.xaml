@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:FoodieApp"
+             x:Class="FoodieApp.Views.RecipeListPage"
+             Title="Foodie">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:RecipeDataTemplateSelector x:Key="recipeTemplateSelc" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+
+        <ListView
+                x:Name="lstFoodie"
+				GroupDisplayBinding="{Binding Title}"
+				GroupShortNameBinding="{Binding ShortName}"
+				IsGroupingEnabled="true"
+                HasUnevenRows="True"
+                SeparatorVisibility="None" 
+                ItemTemplate="{StaticResource recipeTemplateSelc}"/>
+
+
+    </ContentPage.Content>
+</ContentPage>

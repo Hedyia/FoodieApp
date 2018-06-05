@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Xamarin.Forms;
-
+﻿
 namespace FoodieApp
 {
-	public partial class MainPage : ContentPage
+    using Xamarin.Forms;
+
+    public partial class MainPage : ContentPage
 	{
 		public MainPage()
 		{

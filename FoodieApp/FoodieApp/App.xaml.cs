@@ -1,19 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Xamarin.Forms;
-
-namespace FoodieApp
+﻿namespace FoodieApp
 {
-	public partial class App : Application
+    using Xamarin.Forms;
+
+    public partial class App : Application
 	{
 		public App ()
 		{
 			InitializeComponent();
 
-			MainPage = new FoodieApp.MainPage();
+			MainPage = new NavigationPage(new Views.RecipeListPage());
 		}
 
 		protected override void OnStart ()
